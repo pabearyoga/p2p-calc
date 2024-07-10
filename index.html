@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/ios-glyphs/30/9fe870/exchange--v1.png">
+  <title>P2P calculator</title>
+</head>
+<header>
+  <!-- <ul class="list">
+      <li class="list__item on"><a href="index.html">WYSE</a></li>
+      <li class="list__item"><a href="bybit.html">BYBIT</a></li>
+      <li class="list__item"><a href="truste.html">TRUST</a></li>
+    </ul> -->
+  <button class="them-btn" id="theme-toggle">&#9681;</button>
+</header>
+
+<body class="body">
+  <form class="form" id="numberForm">
+    <label class="label" for="number1">Початкова сума UAH:</label>
+    <input class="input" type="number" id="number1" name="number1" required><br><br>
+
+    <div class="mono-wrapper">
+      <div class="mono-form">
+        <label class="label " for="number2">Курс bank UAH - EUR:</label>
+        <div class="mnw">
+
+          <input class="input mk" type="number" id="number2" name="number2" required><br><br>
+          <button class="form-btn mono-btn" type="button" onclick="getMonoApi()" ;"><img
+              src="https://multicast.com.ua/wp-content/uploads/2024/04/monobank-logo.png" width="30px"
+              height="30px"></button>
+
+        </div>
+      </div>
+    </div>
+
+    <label class="label" for="commission">Комісія за переказ BANK to WISE %:</label>
+    <input class="input" type="number" id="commission" name="commission" required><br><br>
+
+    <label class="label" for="number3">Курс bybit EUR - USD:</label>
+    <input class="input" type="number" id="number3" name="number3" required><br><br>
+
+
+    <label class="label" for="number4">Курс bybit USD - UAH:</label>
+    <input class="input" type="number" id="number4" name="number4" required><br><br>
+
+
+    <button class="form-btn" type="button" onclick="calculateSum()">Розрахувати</button>
+
+
+
+    <div class="result">
+      <span>bank (&#8372 to &#x20AC): <span class="result-sum" id="mono">0</span><span class="result-sum">
+          EUR</span></span>
+      <span>bybit (&#x20AC to &#x24): <span class="result-sum" id="bybit">0</span><span class="result-sum">
+          USD</span></span>
+      <span>profit (&#x24 to &#x20AC): <span class="result-sum" id="result-wise">0</span><span class="result-sum">
+          UAH</span></span>
+    </div>
+
+    </span>
+  </form>
+
+
+  </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
